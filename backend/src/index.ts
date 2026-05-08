@@ -8,11 +8,10 @@ app.get("/", (req, res) => {
   });
 });
 
-if (process.env.NODE_ENV !== "production") {
-  const port = process.env.PORT || 5000;
-  app.listen(port, () => {
-    console.log(`🚀 Server running on http://localhost:${port}`);
-  });
-}
+// Railway PORT env var use karo - production mein bhi listen karo
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`🚀 Server running on port ${port}`);
+});
 
 export default app;
