@@ -3,7 +3,7 @@ import { eq, desc } from "drizzle-orm";
 import crypto from "crypto";
 import Razorpay from "razorpay";
 import { db, usersTable, transactionsTable, instancesTable, supportTicketsTable } from "@workspace/db";
-import { requireAuth } from "../middlewares/auth";
+import { requireAuth } from "../middlewares/auth.js";
 import { CreateDepositBody, VerifyDepositBody, UpdateProfileBody } from "@workspace/api-zod";
 
 const router: IRouter = Router();
