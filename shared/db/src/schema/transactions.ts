@@ -1,5 +1,5 @@
 import { pgTable, text, serial, timestamp, doublePrecision, integer, pgEnum } from "drizzle-orm/pg-core";
-import { usersTable } from "./users";
+import { usersTable } from "./users.js";
 
 export const transactionTypeEnum = pgEnum("transaction_type", ["DEPOSIT", "DEDUCTION"]);
 export const transactionStatusEnum = pgEnum("transaction_status", ["PENDING", "SUCCESS", "FAILED"]);
