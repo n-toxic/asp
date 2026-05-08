@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "install:all": "npm install --legacy-peer-deps",
-    "build": "npx drizzle-kit push && node dist/index.js"
+    "build": "npx drizzle-kit push && node dist/index.js",
     "build:backend": "cd backend && npm run build",
     "deploy": "npm run build:backend"
   },
