@@ -1,5 +1,5 @@
 import { pgTable, text, serial, timestamp, doublePrecision, integer, pgEnum } from "drizzle-orm/pg-core";
-import { usersTable } from "./users";
+import { usersTable } from "./users.js";
 
 export const instanceTypeEnum = pgEnum("instance_type", ["RDP", "VPS"]);
 export const instanceStatusEnum = pgEnum("instance_status", ["PENDING", "RUNNING", "STOPPED", "DEPLOYING"]);
