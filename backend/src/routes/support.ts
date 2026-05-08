@@ -1,7 +1,7 @@
 import { Router, type IRouter } from "express";
 import { eq, desc } from "drizzle-orm";
 import { db, usersTable, supportTicketsTable, ticketMessagesTable } from "@workspace/db";
-import { requireAuth } from "../middlewares/auth";
+import { requireAuth } from "../middlewares/auth.js";
 import { CreateTicketBody, ReplyToTicketBody } from "@workspace/api-zod";
 
 const router: IRouter = Router();
