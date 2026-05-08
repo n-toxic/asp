@@ -11,9 +11,12 @@ if (!connectionString) {
 
 export const pool = new Pool({ 
   connectionString,
-  max: 20,
+  max: 10, // Vercel serverless ke liye 20 bahut zyada hai
   idleTimeoutMillis: 30000,
-  connectionTimeoutMillis: 2000,
+  connectionTimeoutMillis: 5000, // 2s se 5s kiya - Aiven remote hai
+  ssl: {
+    rejectUnauthorized: false, // Aiven self-signed cert ke liye zaroori
+  },
 });
 
 export const db = drizzle(pool, { schema });
