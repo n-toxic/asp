@@ -1,5 +1,5 @@
 import { pgTable, text, serial, integer, pgEnum } from "drizzle-orm/pg-core";
-import { instancesTable } from "./instances";
+import { instancesTable } from "./instances.js";
 
 export const portProtocolEnum = pgEnum("port_protocol", ["TCP", "UDP"]);
 export const portDirectionEnum = pgEnum("port_direction", ["INBOUND", "OUTBOUND"]);
