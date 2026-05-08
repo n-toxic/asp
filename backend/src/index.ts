@@ -1,6 +1,13 @@
 import app from "./app.js";
 
-// Local development ke liye
+app.get("/", (req, res) => {
+  res.json({ 
+    status: "online",
+    message: "Techofy Cloud API is running!",
+    timestamp: new Date().toISOString()
+  });
+});
+
 if (process.env.NODE_ENV !== "production") {
   const port = process.env.PORT || 5000;
   app.listen(port, () => {
@@ -8,5 +15,4 @@ if (process.env.NODE_ENV !== "production") {
   });
 }
 
-// Vercel serverless export
 export default app;
