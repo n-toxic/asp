@@ -1,5 +1,5 @@
 import { pgTable, text, serial, integer, timestamp, pgEnum } from "drizzle-orm/pg-core";
-import { instancesTable } from "./instances";
+import { instancesTable } from "./instances.js";
 
 export const serverPoolStatusEnum = pgEnum("server_pool_status", ["AVAILABLE", "ASSIGNED", "MAINTENANCE"]);
 export const serverPoolTypeEnum = pgEnum("server_pool_type", ["RDP", "VPS"]);
