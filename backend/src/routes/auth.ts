@@ -1,9 +1,9 @@
 import { Router, type IRouter } from "express";
 import { eq, and, gt } from "drizzle-orm";
 import { db, usersTable, otpsTable } from "@workspace/db";
-import { hashPassword, verifyPassword, signToken, generateOtp } from "../lib/auth";
-import { sendOtpEmail, sendPasswordResetEmail } from "../lib/mailer";
-import { requireAuth } from "../middlewares/auth";
+import { hashPassword, verifyPassword, signToken, generateOtp } from "../lib/auth.js";
+import { sendOtpEmail, sendPasswordResetEmail } from "../lib/mailer.js";
+import { requireAuth } from "../middlewares/auth.js";
 import { z } from "zod";
 
 const router: IRouter = Router();
